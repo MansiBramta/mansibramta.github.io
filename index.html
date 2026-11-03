@@ -1,19 +1,263 @@
-<section id="about">
-    <p class="section-label">GET TO KNOW ME</p>
-    <h2>About Me</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Bramta | Data Scientist</title>
+    <meta name="description" content="Mansi Bramta - Junior Data Scientist with an M.Sc. in Mathematics. End-to-end machine learning projects in Python, SQL and statistics.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <p>
-        M.Sc. Mathematics graduate with a strong foundation in statistics,
-        machine learning and analytical problem-solving, seeking opportunities
-        in Data Science. I build end-to-end machine learning projects across
-        regression, NLP and recommender systems, with hands-on experience in
-        experiment tracking, model testing, Docker, CI/CD and AWS deployment.
-    </p>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">MB.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
 
-    <p>
-        Beyond building ML solutions, I enjoy exploring statistical concepts,
-        conducting hypothesis tests and communicating data-driven insights.
-        I am also a published author at Towards Data Science, with consulting
-        experience in data validation and analytical reporting.
-    </p>
-</section>
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <p class="hello">HELLO, I'M</p>
+            <h1>Mansi Bramta</h1>
+            <h2 class="tagline">DATA SCIENTIST | MACHINE LEARNING | PYTHON | SQL | STATISTICS</h2>
+            <p class="hero-text">
+                I build end-to-end machine learning solutions, explore statistical
+                patterns and transform data into meaningful insights. Interested in
+                developing practical, reproducible and deployable data-driven applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Explore Projects</a>
+                <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn secondary">GitHub Profile</a>
+            </div>
+            <p class="location">Shimla, Himachal Pradesh, India</p>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <p class="section-label">GET TO KNOW ME</p>
+            <h2>About Me</h2>
+            <p>
+                M.Sc. Mathematics graduate with a strong foundation in statistics, 
+                machine learning and analytical problem-solving, seeking opportunities 
+                in Data Science. Experienced in developing end-to-end machine learning 
+                projects across regression, NLP and recommender systems, with hands-on 
+                experience in experiment tracking, model testing, Docker, CI/CD and AWS 
+                deployment. Published author at Towards Data Science, with consulting 
+                experience in data validation and client-facing analytical reporting.
+            </p>
+            <p>
+                I enjoy exploring statistical concepts, running hypothesis tests and
+                communicating data-driven insights. I am a published author at
+                Towards Data Science, with consulting experience in data validation
+                and client-facing analysis.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <p class="section-label">WHAT I WORK WITH</p>
+            <h2>Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python, pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn, Plotly, Streamlit, FastAPI</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Machine Learning</h3>
+                    <p>Regression, Classification, Clustering, PCA, Random Forest, Boosting (XGBoost, LightGBM, CatBoost), Stacking, Feature Engineering, Imbalanced Data, Cross-Validation, Hyperparameter Tuning (Optuna), Recommender Systems, NLP (TF-IDF)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Statistics</h3>
+                    <p>Hypothesis Testing (T-test, Chi-Square, ANOVA, Kruskal-Wallis), Probability Distributions, Confidence Intervals, Regression Analysis, Effect Sizes</p>
+                </div>
+                <div class="skill-card">
+                    <h3>MLOps &amp; Cloud</h3>
+                    <p>Git, GitHub Actions (CI/CD), DVC, MLflow, Docker, AWS (EC2, S3, ECR, IAM)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Analysis &amp; BI</h3>
+                    <p>SQL (MySQL, CTEs, Window Functions), Excel, Power BI, DAX, Power Query</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <p class="section-label">SELECTED WORK</p>
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card skill-card">
+                    <p class="project-type">MACHINE LEARNING | MLOPS</p>
+                    <h3>Swiggy Delivery Time Prediction</h3>
+                    <ul>
+                        <li>Built an end-to-end regression pipeline on 45,502 orders: EDA, hypothesis tests, model comparison and tuning.</li>
+                        <li>Final boosting model reached RMSE 3.90 min and R&sup2; 0.83, against RMSE 5.93 for the best linear model.</li>
+                        <li>Tracked experiments in MLflow (DagsHub) and served predictions through a FastAPI service.</li>
+                        <li>Added pytest tests, Docker, GitHub Actions CI and AWS (EC2, S3) deployment.</li>
+                    </ul>
+                    <p class="tech">Python, scikit-learn, Optuna, MLflow, FastAPI, Docker, AWS</p>
+                    <a href="https://github.com/MansiBramta/swiggy-delivery-time-prediction" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project-card skill-card">
+                    <p class="project-type">NLP | MLOPS</p>
+                    <h3>Comment Sentiment Analysis: ML Pipeline, API and Chrome Extension</h3>
+                    <ul>
+                        <li>Built a stacking ensemble (LightGBM, Linear SVM, Logistic Regression, Naive Bayes) with 0.864 macro F1 on 7,333 test comments.</li>
+                        <li>Tested domain shift on 105 hand-labelled Hinglish comments, where F1 fell to 0.396.</li>
+                        <li>Created a reproducible DVC pipeline with MLflow model registry and a CI/CD workflow (Docker, AWS ECR, EC2).</li>
+                        <li>Built a Chrome extension that shows sentiment charts for any YouTube video.</li>
+                    </ul>
+                    <p class="tech">Python, LightGBM, DVC, MLflow, FastAPI, Docker, AWS</p>
+                    <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project-card skill-card">
+                    <p class="project-type">RECOMMENDER SYSTEM</p>
+                    <h3>Spotify Hybrid Song Recommender</h3>
+                    <ul>
+                        <li>Built content-based, collaborative and hybrid recommenders on 50,683 songs using TF-IDF, audio features and cosine similarity.</li>
+                        <li>Added an adjustable weighting slider and a fallback for songs with little listening history.</li>
+                        <li>Versioned data with DVC on S3, containerized the app with Docker and deployed it on AWS EC2 with GitHub Actions CI.</li>
+                    </ul>
+                    <p class="tech">Python, scikit-learn, SciPy, Streamlit, Docker, DVC, AWS</p>
+                    <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project-card skill-card">
+                    <p class="project-type">SQL | POWER BI</p>
+                    <h3>Global Superstore Analysis</h3>
+                    <ul>
+                        <li>End-to-end analysis of a 51,290-row retail dataset.</li>
+                        <li>Answered 45 business questions across 8 SQL sections in MySQL.</li>
+                        <li>Built a 9-page Power BI executive dashboard with a dynamic Top N customer selector.</li>
+                    </ul>
+                    <p class="tech">MySQL, Power BI</p>
+                    <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project-card skill-card">
+                    <p class="project-type">EXCEL | SQL | POWER BI</p>
+                    <h3>HR Attrition Analysis</h3>
+                    <ul>
+                        <li>Analysed 1,470 employee records from the IBM HR dataset.</li>
+                        <li>Used SQL window functions and CTEs.</li>
+                        <li>Built a 4-page Power BI dashboard.</li>
+                    </ul>
+                    <p class="tech">Excel, MySQL, Power BI</p>
+                    <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project-card skill-card">
+                    <p class="project-type">EXCEL | SQL | POWER BI</p>
+                    <h3>Steel Industry Energy Consumption</h3>
+                    <ul>
+                        <li>Analysed a 35,040-row energy consumption dataset.</li>
+                        <li>Built SQL queries and a 3-page Power BI dashboard.</li>
+                    </ul>
+                    <p class="tech">Excel, MySQL, Power BI</p>
+                    <a href="https://github.com/MansiBramta" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE & EDUCATION -->
+        <section id="experience">
+            <p class="section-label">MY JOURNEY</p>
+            <h2>Experience</h2>
+
+            <div class="experience-card">
+                <div class="experience-heading">
+                    <h3>Data Scientist Consultant (Part-time)</h3>
+                    <span>Jan 2026 - Jun 2026</span>
+                </div>
+                <p class="company">Dsight</p>
+                <ul>
+                    <li>Validated client datasets by running and interpreting analytical code to check accuracy and consistency.</li>
+                    <li>Prepared PowerPoint and Word deliverables that turned analysis into clear, presentation-ready business insights.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-heading">
+                    <h3>Research Intern</h3>
+                    <span>Jun 2024 - Jul 2024</span>
+                </div>
+                <p class="company">IIIT Naya Raipur (Outreach Program)</p>
+                <ul>
+                    <li>Six-week internship on Epidemiological Modeling under Dr. Krishnanand Vishwakarma; contributed to the SIR model.</li>
+                </ul>
+            </div>
+
+            <h3 class="language-heading">Education</h3>
+
+            <div class="education-card">
+                <h3>M.Sc. Mathematics</h3>
+                <p>Babasaheb Bhimrao Ambedkar University, Lucknow</p>
+                <span>2024 | SGPA: 7.17</span>
+            </div>
+
+            <div class="education-card">
+                <h3>B.Sc. Mathematics</h3>
+                <p>G.B. Pant Memorial Govt. PG College, Rampur Bushahr</p>
+                <span>2021 | CGPA: 8.27</span>
+            </div>
+
+            <h3 class="language-heading">Certifications &amp; Languages</h3>
+
+            <div class="education-card">
+                <h3>Data Science Mentorship Program (DSMP) 2.0</h3>
+                <p>CampusX</p>
+                <span>September 2026</span>
+            </div>
+
+            <div class="education-card">
+                <h3>Languages</h3>
+                <p>Hindi (Native), English (Fluent)</p>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <p class="section-label">WRITING</p>
+            <h2>Publications</h2>
+            <div class="publication-card">
+                <h3>Skewness and Kurtosis: From Moments to Machine Learning</h3>
+                <p>Published on Towards Data Science.</p>
+                <a href="https://medium.com/@mansibramta12" target="_blank" rel="noopener">Read on Medium</a>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <p class="section-label">LET'S CONNECT</p>
+            <h2>Contact</h2>
+            <p>Open to Data Science opportunities. Feel free to reach out.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/mansi-bramta-48b59a41b" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/MansiBramta" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://medium.com/@mansibramta12" target="_blank" rel="noopener">Medium</a>
+                <a href="mailto:mansibramta12@gmail.com">Email</a>
+            </div>
+            <p class="contact-location">Shimla, Himachal Pradesh, India</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mansi Bramta</p>
+    </footer>
+
+</body>
+</html>
