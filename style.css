@@ -1,3 +1,130 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1220;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+}
+
+p {
+    color: #b6c1d1;
+    margin-bottom: 16px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: rgba(11, 18, 32, 0.95);
+    border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* ===== Hero ===== */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    color: #94a3b8;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #60a5fa;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 11px 26px;
+    border-radius: 6px;
+    border: 1px solid #2563eb;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
 
 /* Section Labels */
 .section-label {
@@ -18,6 +145,10 @@
 .btn.secondary {
     background: transparent;
     border: 1px solid #60a5fa;
+}
+
+.btn.secondary:hover {
+    background: #1e293b;
 }
 
 .location, .contact-location {
@@ -50,7 +181,7 @@
 }
 
 .skill-card h3, .experience-card h3,
-.education-card h3 {
+.education-card h3, .publication-card h3 {
     color: #93c5fd;
     margin-bottom: 12px;
 }
@@ -63,6 +194,7 @@
 /* Project Cards */
 .project-card ul {
     padding-left: 20px;
+    list-style: disc;
     color: #b6c1d1;
     margin-bottom: 15px;
 }
@@ -111,6 +243,7 @@
 
 .experience-card ul {
     padding-left: 20px;
+    list-style: disc;
 }
 
 .experience-card li {
@@ -121,6 +254,7 @@
 .language-heading {
     color: #93c5fd;
     margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 /* Contact */
@@ -140,18 +274,42 @@
 
 .contact-links a:hover {
     background: #2563eb;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #1e293b;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #94a3b8;
 }
 
 /* Mobile */
 @media (max-width: 650px) {
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .navbar {
         flex-wrap: wrap;
         gap: 15px;
+        padding: 14px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
     }
 
     .experience-heading {
